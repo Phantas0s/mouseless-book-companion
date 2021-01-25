@@ -1,0 +1,16 @@
+# This file should be in "$XDG_CONFIG_HOME/tmuxp/dotfiles.yml"
+
+session_name: dotfiles
+start_directory: $HOME/dotfiles
+
+windows:
+    - window_name: nvim dotfiles
+      layout: tiled
+      panes:
+          - nvim +FZF
+    - window_name: terms
+      layout: tiled
+      panes:
+          -
+          - ls -lah
+          -
