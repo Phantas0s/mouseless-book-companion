@@ -1,0 +1,14 @@
+---
+# This file should be in `~/.config/tmuxp/arch_installer.yml`
+session_name: arch_installer
+start_directory: $HOME/workspace/arch_installer
+windows:
+    - window_name: nvim
+      layout: tiled
+      panes:
+          - nvim +FZF
+    - window_name: terms
+      layout: tiled
+      panes:
+          -
+          - bash
