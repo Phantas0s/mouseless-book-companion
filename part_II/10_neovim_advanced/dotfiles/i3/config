@@ -105,7 +105,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $terms "1: terms"
 set $web "2: web"
-set $ws "4"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
