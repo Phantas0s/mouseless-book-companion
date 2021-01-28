@@ -1,0 +1,40 @@
+essential,xorg,X server
+essential,xorg-xinit,Display server boot
+essential,man,Manual
+essential,man-pages,Manual pages
+network,openssh,Remote login tool for SSH protocol
+network,networkmanager,Network manager
+tools,rsync,Synchronizing files across computers
+tools,arandr,xrandr GUI
+tools,xsel,Manipulate the X selection
+tools,fzf,Command line fuzzy finder
+tools,scrot,Screenshot software
+tools,udiskie,Automount devices
+tools,lxappearance,Theme switcher for GTK+
+tools,xcape,Configure modifier keys to act as other keys
+tools,ripgrep,Faster alternative to grep
+tmux,tmux,Terminal multiplexer
+tmux,tmuxp,Configure tmux session + windows + panes via config files
+notifier,dunst,Notification system
+notifier,libnotify,Notifier
+git,git,Version control system
+git,diff-so-fancy,Human readable git diff
+i3,i3-wm,i3 window tile manager
+i3,i3status,i3 status bar
+i3,i3lock,i3 lock monitor
+i3,dmenu,Dynamic menu for X
+i3,feh,X11 image viewer
+i3,arc-gtk-theme,Desktop themes
+zsh,zsh,Unix shell (Z-Shell)
+zsh,zsh-completions,Additional completions for Zsh
+zsh,zsh-syntax-highlighting,Syntax highlighting for ZSH
+neovim,neovim,Editor... and much more
+neovim,python-neovim,Python for neovim
+neovim,python2-neovim,Python2 for neovim (AUR)
+neovim,ruby-neovim,Ruby for neovim (AUR)
+neovim,nodejs-neovim,Nodejs for neovim (AUR)
+urxvt,rxvt-unicode,Terminal Urxvt
+urxvt,urxvt-tabbedex-mina86-git,Improved tabs for Urxvt (AUR)
+firefox,firefox,Browser Firefox
+qutebrowser,qutebrowser,Qutebrowser
+lynx,lynx,Text-based browser
