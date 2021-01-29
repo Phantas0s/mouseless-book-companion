@@ -20,6 +20,9 @@ ln -s "$DOTFILES/X11" "$XDG_CONFIG_HOME"
 mkdir -p "$XDG_CONFIG_HOME/nvim/autoload"
 ln -sf "$DOTFILES/nvim/autoload/plug.vim" "$XDG_CONFIG_HOME/nvim/autoload/plug.vim"
 
+# Install (or update) all the plugins
+nvim --noplugin +PlugUpdate +qa
+
 ######
 # i3 #
 ######
@@ -42,6 +45,7 @@ ln -sf "$DOTFILES/zsh/external" "$XDG_CONFIG_HOME/zsh"
 # Fonts #
 #########
 
+mkdir -p "$XDG_DATA_HOME"
 cp -rf "$DOTFILES/fonts" "$XDG_DATA_HOME"
 
 #########

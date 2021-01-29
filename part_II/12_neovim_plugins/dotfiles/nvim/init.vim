@@ -7,6 +7,7 @@ call plug#begin("$XDG_CONFIG_HOME/nvim/plugged")
     Plug 'simnalamburt/vim-mundo'
     Plug 'christoomey/vim-tmux-navigator'
 
+    " For coc.vim to work, you'll need nodejs and yarn (both available in official repos).
     " Only bash-language-server is configured with coc.vim. See the file coc-settings.json.
     " To make it work, you need to install bash-language-server: `sudo pacman -S bash-language-server`
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
