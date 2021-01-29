@@ -42,10 +42,10 @@ done
 
 DOTFILES="/home/$(whoami)/dotfiles"
 if [ ! -d "$DOTFILES" ]; then
-    # Don't forget to replace Phantas0s with your own username on Github 
+    # Don't forget to replace Phantas0s with your own username on Github
     git clone https://github.com/Phantas0s/dotfiles.git \
-        "$DOTFILES" >/dev/null
+    "$DOTFILES" >/dev/null
 fi
 
 source "/home/$(whoami)/dotfiles/.zshenv"
-cd $DOTFILES && sh install.sh
+cd "$DOTFILES" && sh install.sh

@@ -29,7 +29,7 @@ dialog --title "Choose your hard drive" --no-cancel --radiolist \
 "Where do you want to install your new system? \n\n\
 Select with SPACE, valid with ENTER. \n\n\
 WARNING: Everything will be DESTROYED on the hard disk!" \
-15 60 4 "${devices_list[@]}" 2> hd 
+15 60 4 "${devices_list[@]}" 2> hd
 
 hd=$(cat hd) && rm hd
 
@@ -134,8 +134,8 @@ echo "$hd" > /mnt/var_hd
 mv comp /mnt/comp
 
 # Don't forget to replace "Phantas0s" by the username of your Github account
-curl "https://raw.githubusercontent.com/Phantas0s\
-    arch_installer/master/install_chroot.sh" > /mnt/install_chroot.sh
+curl https://raw.githubusercontent.com/Phantas0s\
+/arch_installer/master/install_chroot.sh > /mnt/install_chroot.sh
 
 arch-chroot /mnt bash install_chroot.sh
 

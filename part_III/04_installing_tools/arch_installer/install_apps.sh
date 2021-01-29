@@ -3,8 +3,10 @@
 name=$(cat /tmp/user_name)
 
 apps_path="/tmp/apps.csv"
-curl https://raw.githubusercontent.com/<your_github_user_name>\
-    /arch_installer/master/apps.csv > $apps_path
+
+# Don't forget to replace "Phantas0s" by the username of your Github account
+curl https://raw.githubusercontent.com/Phantas0s\
+/arch_installer/master/apps.csv > $apps_path
 
 dialog --title "Welcome!" \
 --msgbox "Welcome to the install script for your apps and dotfiles!" \
@@ -73,6 +75,7 @@ done
 
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
+# Don't forget to replace "Phantas0s" by the username of your Github account
 curl https://raw.githubusercontent.com/Phantas0s\
 /arch_installer/master/install_user.sh > /tmp/install_user.sh;
 

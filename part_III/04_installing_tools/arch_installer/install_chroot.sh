@@ -83,8 +83,8 @@ echo "$name" > /tmp/user_name
 # Ask to install all your apps / dotfiles.
 # Don't forget to replace "Phantas0s" by the username of your Github account!
 dialog --title "Continue installation" --yesno \
-    "Do you want to install all your apps and your dotfiles?" \
-    10 60 \
-    && curl -LO https://raw.githubusercontent.com/Phantas0s\
-    /arch_installer/master/install_apps.sh \
-    && bash ./install_app.sh
+"Do you want to install all your apps and your dotfiles?" \
+10 60 \
+&& curl -LO https://raw.githubusercontent.com/Phantas0s\
+/arch_installer/master/install_apps.sh \
+&& bash ./install_app.sh
