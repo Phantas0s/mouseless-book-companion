@@ -35,9 +35,9 @@ cat /tmp/aur_queue | while read -r line
 do
     c=$(( "$c" + 1 ))
     dialog --infobox \
-    "AUR install - Downloading and installing program $c out of $count: $prog..." \
+    "AUR install - Downloading and installing program $c out of $count: $line..." \
     10 60
-    aur_check "$prog"
+    aur_check "$line"
 done
 
 DOTFILES="/home/$(whoami)/dotfiles"

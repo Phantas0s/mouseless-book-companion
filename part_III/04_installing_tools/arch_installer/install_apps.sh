@@ -14,18 +14,19 @@ dialog --title "Welcome!" \
 
 # Allow the user to select the group of packages he (or she) wants to install.
 apps=("essential" "Essentials" on
-    "network" "Network" on
-    "tools" "Nice tools to have (highly recommended)" on
-    "tmux" "Tmux" on
-    "notifier" "Notification tools" on
-    "git" "Git & git tools" on
-    "i3" "i3 wm" on
-    "zsh" "The Z-Shell (zsh)" on
-    "neovim" "Neovim" on
-    "urxvt" "URxvt" on
-    "firefox" "Firefox (browser)" off
-    "qutebrowser" "Qutebrowser (browser)" off
-    "lynx" "Lynx (browser)" off)
+      "network" "Network" on
+      "tools" "Nice tools to have (highly recommended)" on
+      "tmux" "Tmux" on
+      "notifier" "Notification tools" on
+      "git" "Git & git tools" on
+      "i3" "i3 wm" on
+      "zsh" "The Z-Shell (zsh)" on
+      "neovim" "Neovim" on
+      "urxvt" "URxvt" on
+      "firefox" "Firefox (browser)" off
+      "js" "JavaScript tooling" off
+      "qutebrowser" "Qutebrowser (browser)" off
+      "lynx" "Lynx (browser)" off)
 
 dialog --checklist \
 "You can now choose what group of application you want to install. \n\n\
@@ -60,8 +61,8 @@ echo "$apps" | while read -r line; do
     8 70
 
     ((pacman --noconfirm --needed -S "$line" > /tmp/arch_install 2>&1) \
-    || echo "$1" >> /tmp/aur_queue) \
-    || echo "$1" >> /tmp/arch_install_failed
+    || echo "$line" >> /tmp/aur_queue) \
+    || echo "$line" >> /tmp/arch_install_failed
 
     if [ "$line" = "zsh" ]; then
         # Set Zsh as default terminal for our user

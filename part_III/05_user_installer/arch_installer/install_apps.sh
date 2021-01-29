@@ -61,8 +61,8 @@ echo "$apps" | while read -r line; do
     8 70
 
     ((pacman --noconfirm --needed -S "$line" > /tmp/arch_install 2>&1) \
-    || echo "$1" >> /tmp/aur_queue) \
-    || echo "$1" >> /tmp/arch_install_failed
+    || echo "$line" >> /tmp/aur_queue) \
+    || echo "$line" >> /tmp/arch_install_failed
 
     if [ "$line" = "zsh" ]; then
         # Set Zsh as default terminal for our user

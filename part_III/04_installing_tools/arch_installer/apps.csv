@@ -13,6 +13,7 @@ tools,udiskie,Automount devices
 tools,lxappearance,Theme switcher for GTK+
 tools,xcape,Configure modifier keys to act as other keys
 tools,ripgrep,Faster alternative to grep
+tools,htop,Interactive process viewer
 tmux,tmux,Terminal multiplexer
 tmux,tmuxp,Configure tmux session + windows + panes via config files
 notifier,dunst,Notification system
@@ -33,6 +34,8 @@ neovim,python-neovim,Python for neovim
 neovim,python2-neovim,Python2 for neovim (AUR)
 neovim,ruby-neovim,Ruby for neovim (AUR)
 neovim,nodejs-neovim,Nodejs for neovim (AUR)
+js,nodejs,Nodejs (for coc.vim)
+js,yarn,Dependency manager (for coc.vim)
 urxvt,rxvt-unicode,Terminal Urxvt
 urxvt,urxvt-tabbedex-mina86-git,Improved tabs for Urxvt (AUR)
 firefox,firefox,Browser Firefox
