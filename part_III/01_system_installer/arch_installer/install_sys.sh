@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -Sy
+pacman -Syu
 pacman --noconfirm -S dialog
 
 timedatectl set-ntp true
@@ -27,7 +27,7 @@ dialog --title "Choose your hard drive" --no-cancel --radiolist \
 "Where do you want to install your new system?\n\n\
 Select with SPACE, valid with ENTER.\n\n\
 WARNING: Everything will be DESTROYED on the hard disk!" \
-15 60 4 "${devices_list[@]}" 2> hd 
+15 60 4 "${devices_list[@]}" 2> hd
 
 hd=$(cat hd) && rm hd
 
