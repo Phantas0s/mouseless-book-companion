@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -Syu
+pacman -Syu --noconfirm
 pacman --noconfirm -S dialog
 
 timedatectl set-ntp true
