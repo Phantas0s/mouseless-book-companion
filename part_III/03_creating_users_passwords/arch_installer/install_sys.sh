@@ -1,7 +1,7 @@
 #!/bin/bash
 
-pacman -Syu
-pacman --noconfirm -S dialog
+# Never run pacman -Sy on your real system!
+pacman -Sy dialog --noconfirm
 
 timedatectl set-ntp true
 
