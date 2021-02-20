@@ -45,8 +45,12 @@ nnoremap <leader>bn :bn<cr> ;buffer next
 nnoremap <leader>tn gt ;new tab
 
 " Config for chrisbra/csv.vim
-autocmd BufRead,BufWritePost *.csv :%ArrangeColumn!
-autocmd BufWritePre *.csv :%UnArrangeColumn
+augroup filetype_csv
+    autocmd! 
+
+    autocmd BufRead,BufWritePost *.csv :%ArrangeColumn!
+    autocmd BufWritePre *.csv :%UnArrangeColumn
+augroup END
 
 " Config for fzf.vim (BONUS :D)
 nnoremap <leader>f :Files<cr>
