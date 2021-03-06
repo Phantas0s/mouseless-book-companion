@@ -2,6 +2,12 @@ fpath=($ZDOTDIR/external $fpath)
 
 source "$XDG_CONFIG_HOME/zsh/aliases"
 
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
 autoload -Uz compinit; compinit
 _comp_options+=(globdots) # With hidden files
 source ~/dotfiles/zsh/external/completion.zsh
@@ -19,12 +25,6 @@ bindkey -v
 export KEYTIMEOUT=1
 
 autoload -Uz cursor_mode && cursor_mode
-
-zmodload zsh/complist
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
 
 autoload -Uz edit-command-line
 zle -N edit-command-line
