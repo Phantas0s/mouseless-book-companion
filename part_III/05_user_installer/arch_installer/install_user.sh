@@ -3,6 +3,9 @@
 mkdir -p "/home/$(whoami)/Documents"
 mkdir -p "/home/$(whoami)/Downloads"
 
+# Uncomment to set the keymap you want. Replace "fr" by your country code
+# localectl --no-convert set-x11-keymap fr
+
 # Function able to install any package from the AUR (needs the package names as arguments).
 aur_install() {
     curl -O "https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz" \
