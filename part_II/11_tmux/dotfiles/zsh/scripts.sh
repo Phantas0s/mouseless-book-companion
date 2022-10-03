@@ -8,7 +8,7 @@ ftmuxp() {
     if [[ -n $TMUX ]]; then
         return
     fi
-    
+
     # get the IDs
     ID="$(ls $XDG_CONFIG_HOME/tmuxp | sed -e 's/\.yml$//')"
     if [[ -z "$ID" ]]; then

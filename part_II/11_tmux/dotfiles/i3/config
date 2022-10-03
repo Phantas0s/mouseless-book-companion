@@ -96,7 +96,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+p focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -261,12 +261,23 @@ client.placeholder 	#000000 #0c0c0c $white2 #000000 0c0c0c
 for_window [class="URxvt*"] border pixel 1
 
 # Terminal scratchpad with tmux and three windows: 1. Terminal | 2.Neovim temp file
+
+# First version
+
+# for_window [instance="urxvt_scratchpad"] move to scratchpad, border none
+# bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
+# exec urxvtc -name urxvt_scratchpad \
+# -e tmux -2 new-session -d -s scratchpad \; \
+# new-window -n nvim 'nvim +e /tmp/nvim-tmp.md' \; \
+# attach-session -d -t scratchpad
+
+# Second version
+
 for_window [instance="urxvt_scratchpad"] move to scratchpad, border none
 bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
-exec urxvtc -name urxvt_scratchpad \
--e tmux -2 new-session -d -s scratchpad \; \
-new-window -n nvim 'nvim +e /tmp/nvim-tmp.md' \; \
-attach-session -d -t scratchpad
+exec "$DOTFILES/zsh/scratchpad.sh"
+
+## TODO - Repeat that everywhere else...
 
 # htop scratchpad
 for_window [instance="htop_scratchpad"] move to scratchpad, border none
@@ -304,7 +315,7 @@ mode "$mode_display" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+x mode "$mode_display"
+bindsym $mod+a mode "$mode_display"
 
 exec --no-startup-id dunst
 
