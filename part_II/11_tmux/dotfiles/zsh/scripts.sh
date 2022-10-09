@@ -28,3 +28,7 @@ ftmuxp() {
         tmuxp load "$ID"
     fi
 }
+
+scratchpad() {
+    "$DOTFILES/zsh/scratchpad.sh"
+}
