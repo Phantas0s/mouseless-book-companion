@@ -10,7 +10,7 @@ ftmuxp() {
     if [[ -n $TMUX ]]; then
         return
     fi
-    
+
     # get the IDs
     ID="$(ls $XDG_CONFIG_HOME/tmuxp | sed -e 's/\.yml$//')"
     if [[ -z "$ID" ]]; then
@@ -29,6 +29,10 @@ ftmuxp() {
         printf '\033]777;tabbedx;set_tab_name;%s\007' "$ID"
         tmuxp load "$ID"
     fi
+}
+
+scratchpad() {
+    "$DOTFILES/zsh/scratchpad.sh"
 }
 
 # open man page in vim

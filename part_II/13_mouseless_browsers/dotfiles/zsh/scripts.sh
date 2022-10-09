@@ -31,6 +31,10 @@ ftmuxp() {
     fi
 }
 
+scratchpad() {
+    "$DOTFILES/zsh/scratchpad.sh"
+}
+
 # open man page in vim
 vman() {
     nvim -c "SuperMan $*"
