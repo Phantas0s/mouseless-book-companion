@@ -23,7 +23,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 hwclock --systohc
 # Don't forget to change "Europe/Berlin" with your own timezone!
 # To list the timezones: `timedatectl list-timezones`
-timedatectl set-timezone "Europe/Berlin"
+ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
 # Replace en_US.UTF-8 by whatever locale you want.
 # You can run `cat /etc/locale.gen` to see all the locales available
