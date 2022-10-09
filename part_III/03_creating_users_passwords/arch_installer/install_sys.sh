@@ -111,6 +111,9 @@ EOF
 
 partprobe "$hd"
 
+# Add a suffix "p" in case with have a NVMe controller chip
+echo "$hd" | grep -E 'nvme' &> /dev/null && hd="${hd}p"
+
 # Format the partitions
 
 mkswap "${hd}2"
